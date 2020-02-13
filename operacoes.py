@@ -57,7 +57,7 @@ class Numero(object):
 
 if __name__ == "__main__":
 
-	from impressao import Impressao
+	from impressao import Impressao, Prefixa_visitor
 
 	expressao_esquerda = Soma(Numero(10),Numero(20))
 	expressao_direita = Soma(Numero(5),Numero(2))
@@ -65,3 +65,6 @@ if __name__ == "__main__":
 
 	impressao = Impressao()
 	expressao_conta.aceita(impressao)
+
+	prefixa = Prefixa_visitor()
+	expressao_conta.aceita(prefixa)
